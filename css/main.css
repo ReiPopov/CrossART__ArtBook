@@ -1,0 +1,449 @@
+main {
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 40px 0;
+}
+
+.maintenance {
+	position: fixed;
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background-image: url('/img/maintenance.jpg');
+	background-size: 100% 100%;
+}
+
+.homeBanner {
+	width: 88%;
+	position: relative;
+	box-shadow: 0px 4px 8px #000;
+	border-radius: 30px;
+	display: block;
+}
+
+.homeBanner > img {
+	width: 100%;
+	border-radius: 30px;
+}
+.homeBanner > a {
+	background-color: #ffbe4181;
+	padding: 10px;
+	border-radius: 30px;
+	font-size: 22px;
+	position: absolute;
+	left: 25px;
+	bottom: 25px;
+	transition: .3s;
+}
+.homeBanner > a:hover {
+	background-color: #ffbe41;
+	box-shadow: 0px 4px 8px #000;
+}
+
+.Prologue,
+.Guide,
+.lastNews,
+.Merch {
+/*	background-color: #222;*/
+	width: 100%;
+/*	height: 100px;*/
+/*	margin-top: 10px;*/
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Prologue > div,
+.Guide > div,
+.lastNews > div,
+.Merch > div {
+	width: 88%;
+	height: 100%;
+	position: relative;
+/*	box-shadow: 0px 4px 8px #000;*/
+/*	border-radius: 30px;*/
+	display: flex;
+	flex-direction: column;
+/*	align-items: center;*/
+}
+
+.Prologue > div > .content {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	padding: 10px 0;
+}
+
+.Prologue > div > div > div {
+	width: 500px;
+	font-size: 18px;
+	letter-spacing: .3px;
+/*	color: #fff;*/
+/*	text-shadow: 2px 2px 4px #000;*/
+}
+
+.Prologue > div > div > img {
+	width: 35%;
+	border-radius: 30px;
+}
+
+.Guide > div > .content {
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+	z-index: 2;
+	overflow-x: hidden;
+	padding: 10px 0;
+	margin-left: 0px;
+}
+.Guide > div > .content > .block {
+	min-width: 300px;
+	max-height: 416.25px;
+	height: 385px;
+	margin-left: 10px;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 10px;
+	transition: .3s;
+	filter: grayscale(100%);
+}
+.Guide > div > .content > .block > h1 {
+	color: #ffbe41;
+	text-shadow: 2px 2px 4px #000;
+	font-family: 'Refuse Pro';
+}
+.Guide > div > .content > .block > p {
+	color: #fff;
+	text-shadow: 2px 2px 4px #000;
+	font-size: 20px;
+	max-width: 700px;
+	font-family: 'Refuse Pro';
+}
+.Guide > div > .content > .block > a {
+	display: none;
+	font-family: 'Refuse Pro';
+}
+.Guide > div > .content > .block > a.active {
+	display: block;
+	color: #000;
+	padding: 7px 0;
+	width: 110px;
+	font-size: 18px;
+	text-align: center;
+	background-color: #ffbe41;
+	margin-top: 10px;
+	border-radius: 30px;
+}
+
+.Guide > div > .content > .block.active {
+	min-width: 720px;
+}
+
+#GCA-left {
+	font-size: 32px;
+	color: #ffbe41;
+	scale: 1;
+	transition: .3s;
+	cursor: pointer;
+}
+#GCA-right {
+	font-size: 32px;
+	color: #ffbe41;
+	scale: 1;
+	transition: .3s;
+	cursor: pointer;
+}
+#GCA-left:hover {
+	scale: 1.5;
+	transition: .3s;
+}
+#GCA-right:hover {
+	scale: 1.5;
+	transition: .3s;
+}
+
+.l1,
+.l2,
+.l3,
+.l4,
+.l5,
+.l6 {
+	width: 50px;
+	height: 6px;
+	background-color: #a5a5a5;
+	border-radius: 50px;
+	margin: 0 2.5px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.l1.active,
+.l2.active,
+.l3.active,
+.l4.active,
+.l5.active,
+.l6.active {
+	display: block;
+	width: 300px;
+	background-color: #ffbe41;
+}
+
+.lastNews > div > h2 {
+	color: #a5a5a5;
+	font-family: 'Refuse Pro';
+	margin-bottom: 10px;
+	border-bottom: 2px solid #a5a5a5;
+}
+.lastNews > div > .News {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+.lastNews > div > .News > .newsContent {
+	width: calc(33% - 10px);
+	height: auto;
+/*	background-color: #fff;*/
+	padding: 12px 10px;
+	margin: 5px 5px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-family: 'Refuse Pro';
+	transition: .3s;
+	cursor: pointer;
+	background-size: 100% 100%;
+
+}
+.lastNews > div > .News > .newsContent > h2 {
+	color: #000;
+	transition: .3s;
+}
+.lastNews > div > .News > .newsContent:hover > h2 {
+	color: #ffbe41;
+}
+.lastNews > div > .News > .newsContent > img {
+	width: 360px;
+	height: 202.50px;
+	margin-bottom: 12px;
+}
+.lastNews > div > .News > .newsContent > span {
+	color: #a5a5a5;
+}
+
+/* WORLD MAP  */
+
+.WorldMap {
+	width: 1170px;
+	height: 746.4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 20px #000;
+	border-radius: 30px;
+	position: relative;
+	background-image: url('/img/WorldMap/KPK.png');
+	background-size: 100% 100%;
+}
+.WorldMap > div {
+	width: calc(88% + 8px);
+	height: calc(85% - 4px);
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: .3s;
+}
+
+.WorldMap > div > img{
+	width: 100%;
+	height: 100%;
+}
+
+.mapMain-label {
+/*	display: none;*/
+	width: 20px;
+	height: 20px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	background-color: #00000081;
+	position: absolute;
+	z-index: 10;
+	cursor: pointer;
+	transition: .3s;
+}
+.mapMain-label:hover {
+/*	background-color: #000000;*/
+	border: 2px solid #ffbe41;
+}
+
+.mapMain-preview {
+	width: 300px;
+	height: 168.75px;
+	position: absolute;
+	z-index: 100;
+}
+
+.mapMain-preview > h1 {
+	font-family: 'Refuse Pro';
+	background-color: #00000090;
+	color: #ffbe41;
+	text-align: center;
+	width: 100%;
+	padding: 4px 0;
+	position: absolute;
+	bottom: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.mapMain-preview > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 168.75px;
+}
+
+.WorldMap > div > h2 {
+	font-family: 'Refuse Pro';
+	font-size: 80px;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	z-index: 1;
+	top: 33%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: .3s;
+}
+
+.WorldMap > div > .mapDesc {
+	position: absolute;
+	top: calc(38% + 10px);
+	left: 5px;
+	transition: .3s;
+	overflow-y: auto;
+	max-height: 60%;
+}
+
+.WorldMap > div > .mapDesc > h3 {
+	font-family: 'Refuse Pro';
+	font-size: 32px;
+	color: #ffbe41;
+}
+
+.WorldMap > div > .mapDesc > p {
+	font-family: 'Refuse Pro';
+	font-size: 22px;
+	color: #fff;
+	margin-bottom: 5px;
+}
+
+.go-back,
+.see-more {
+	background-color: #ffbe41;
+	border: none;
+	font-family: 'Refuse Pro';
+	font-size: 20px;
+	padding: 0 5px;
+	cursor: pointer;
+	transition: .3s;
+	z-index: 10;
+}
+.go-back:hover,
+.see-more:hover {
+	color: #fff;
+}
+
+.map-photos {
+	display: flex;
+	justify-content: center;
+	width: 1052.8px;
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	transition: .3s;
+}
+
+.map-photos > img {
+	width: 240px;
+	margin: 0px 10px;
+	border: 2px solid #000;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.fullImg {
+	width: 900px;
+	height: 506.25px;
+	position: absolute;
+	top: 42%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: .3s;
+}
+
+.fa-solid.fa-xmark {
+	color: #a5a5a581;
+	font-size: 30px;
+	position: absolute;
+	top: 2%;
+	right: 8%;
+	cursor: pointer;
+}
+
+.bookshelf {
+	border: 16px solid #000;
+	width: 1170px;
+	height: 1000px;
+}
+
+.shelf {
+	width: 100%;
+	border-bottom: 16px solid #000;
+	display: flex;
+	padding-bottom: 0px;
+}
+
+.shelf > .history {
+	width: calc(100% / 10);
+	height: 150px;
+	background-color: red;
+	margin: 5px;
+	border: 2px solid #000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	cursor: pointer;
+}
+.shelf > .history > h2 {
+	font-family: 'Refuse Pro';
+	transition: 0.3s;
+	width: 100%;
+	background-color: #00000050;
+	text-align: center;
+}
+.shelf > .history:hover > h2 {
+	color: #ffbe41;
+}
+.shelf > .history > h2:nth-child(2n) {
+	font-size: 14px;
+}

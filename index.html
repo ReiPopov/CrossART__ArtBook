@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cross Art | Арт бук</title>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css">
+	<link rel="stylesheet" href="/CrossArt/css/globalStyle.css">
+	<link rel="stylesheet" href="/CrossArt/css/header.css">
+	<link rel="stylesheet" href="/CrossArt/css/fonts.css">
+	<link rel="stylesheet" href="/CrossArt/css/main.css">
+	<link rel="stylesheet" href="/CrossArt/css/burger.css">
+	<link rel="stylesheet" href="/CrossArt/css/adaptive.css">
+
+	<style>
+        #book {
+        	position: absolute;
+        	top: 50%;
+        	left: 50%;
+        	transform: translate(-50%, -50%);
+        }
+        .page {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: white;
+        }
+        .cover {
+            background-color: #4CAF50;
+        }
+        .page2 {
+            background-color: #FF9800;
+        }
+        .navigation {
+            position: absolute;
+            z-index: 1000;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .arrow {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body style="background-image: url('/CrossArt/img/ArtBook/Back-wood.png'); background-size: 100% 70%; background-position: center; width: 100%; overflow: hidden;"
+>
+	<main>
+		<div style="background-image: url('/CrossArt/img/ArtBook/cover-book.png'); background-size: 100% 100%; width: 97%; height: 65.54%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+			<div class="bookmarks" style="position: absolute; top: 0; left: 0; transform: translateY(-20px);">
+				<button class="arrow" id="Introduction">Вступление</button>
+				<button class="arrow" id="Chap1">1</button>
+				<button class="arrow" id="Chap2">2</button>
+				<button class="arrow" id="Chap3">3</button>
+				<button class="arrow" id="Chap4">4</button>
+				<button class="arrow" id="Chap5">5</button>
+				<button class="arrow" id="Chap6">6</button>
+				<button class="arrow" id="Chap7">7</button>
+				<button class="arrow" id="Chap8">8</button>
+				<button class="arrow" id="Chap9">9</button>
+				<button class="arrow" id="Chap10">10</button>
+				<button class="arrow" id="Chap11">11</button>
+				<button class="arrow" id="Chap12">12</button>
+			</div>
+			<div id="book">
+				<!-- <div class="page" loading='lazy' style="background-image: url(''/CrossArt/img/ArtBook/cover.png'); background-size: 100% 100%;"></div> -->
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Introduction/Page-1.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Introduction/Page-2.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Introduction/Page-3.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Introduction/Page-4.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Introduction/Page-5.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-6.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-7.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-8.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-9.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-10.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-11.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-12.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-13.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-14.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-15.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-16.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-17.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-18.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-19.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-20.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-21.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-22.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-23.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-24.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-25.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-1/Page-26.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-2/Page-27.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-2/Page-28.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-2/Page-29.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-2/Page-30.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-2/Page-31.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-2/Page-32.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-2/Page-33.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-2/Page-34.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-2/Page-35.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-36.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-37.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-38.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-39.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-40.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-41.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-42.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-43.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-44.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-45.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-46.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-47.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-48.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-49.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-50.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-51.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-52.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-53.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-54.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-55.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-56.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-57.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-58.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-59.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-60.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-61.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-62.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-63.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-64.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-65.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-66.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-3/Page-67.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-68.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-69.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-70.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-71.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-72.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-73.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-74.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-75.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-76.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-77.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-78.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-79.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-80.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-81.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-4/Page-82.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-5/Page-83.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-5/Page-84.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-5/Page-85.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-5/Page-86.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-5/Page-87.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-5/Page-88.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-5/Page-89.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-90.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-91.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-92.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-93.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-94.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-95.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-96.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-97.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-98.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-99.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-100.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-101.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-102.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-6/Page-103.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-7/Page-104.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-7/Page-105.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-7/Page-106.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-7/Page-107.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-7/Page-108.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-7/Page-109.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-7/Page-110.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-7/Page-111.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-7/Page-112.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-7/Page-113.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-7/Page-114.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-7/Page-115.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-8/Page-116.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-8/Page-117.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-8/Page-118.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-119.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-120.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-121.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-122.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-123.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-124.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-125.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-126.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-127.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-128.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-129.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-130.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-131.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-132.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-133.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-134.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-135.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-136.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-137.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-138.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-139.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-140.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-141.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-142.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-143.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-144.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-145.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-146.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-147.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-148.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-149.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-150.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-151.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-152.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-153.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-154.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-155.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-156.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-157.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-158.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-159.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-160.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-161.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-162.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-163.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-164.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-165.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-166.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-167.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-168.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-169.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-170.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-171.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-172.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-173.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-174.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-175.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-176.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-177.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-178.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-179.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-180.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-181.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-182.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-183.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-184.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-185.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-186.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-187.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-188.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-189.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-190.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-191.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-192.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-193.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-194.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-195.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-196.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-197.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-198.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-199.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-200.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-201.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-202.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-203.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-204.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-205.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-206.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-207.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-208.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-209.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-210.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-211.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-212.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-213.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-214.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-9/Page-215.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-216.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-217.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-218.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-219.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-220.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-221.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-222.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-223.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-224.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-225.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-226.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-227.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-228.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-229.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-230.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-231.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-232.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-233.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-234.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-235.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-236.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-237.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-238.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-239.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-240.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-241.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-242.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-243.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-244.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-245.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-246.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-247.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-248.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-249.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-250.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-251.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-252.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-253.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-254.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-255.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-256.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-257.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-258.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-259.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-260.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-261.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-262.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-263.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-264.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-265.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-266.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-267.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-268.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-269.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-270.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-271.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-272.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-273.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-274.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-275.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-276.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-277.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-278.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-279.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-280.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-281.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-282.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-283.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-284.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-285.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-286.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-287.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-288.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-289.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-290.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-291.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-292.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-293.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-294.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-295.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-296.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-297.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-298.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-299.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-300.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-301.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-302.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-10/Page-303.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-304.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-305.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-306.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-307.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-308.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-309.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-310.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-311.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-312.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-313.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-314.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-315.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-316.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-317.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-318.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-319.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-320.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-321.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-322.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-323.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-324.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-325.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-326.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-327.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-328.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-329.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-330.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-331.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-332.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-333.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-334.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-335.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-336.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-337.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-338.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-339.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-340.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-341.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-342.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-343.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-344.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-345.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-346.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-347.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-348.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-349.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-350.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-351.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-352.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-353.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-354.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-355.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-11/Page-356.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-12/Page-357.webp'); background-size: 100% 100%; border-left: 10px solid #222;"></div>
+				<div class="page" loading="lazy" style="background-image: url('/CrossArt/img/ArtBook/Chapter-12/Page-358.webp'); background-size: 100% 100%; border-right: 10px solid #222;"></div>
+
+			</div>
+			<div class="navigation">
+				<button class="arrow" id="prev">&lt;</button>
+				<button class="arrow" id="next">&gt;</button>
+			</div>			
+		</div>
+
+	</main>
+	<footer></footer>
+	<script>
+		if (window.innerWidth <= 768) {
+			window.location.href = "https://daulet050kz.github.io/CrossArt/Mobile.html";
+		} else {
+			window.location.href = "https://daulet050kz.github.io/CrossArt/index.html";
+		}
+	</script>
+
+	<script src="/CrossArt/js/header.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="/CrossArt/js/turn.min.js"></script>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "/CrossArt/js/turn.min.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'turn-js'));
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var checkTurnJsLoaded = setInterval(function() {
+                if (typeof $.fn.turn === 'function') {
+                    clearInterval(checkTurnJsLoaded);
+                    $('#book').turn({
+                        width: "90%",
+                        height: "86%",
+                        autoCenter: true
+                    });
+                }
+            }, 0);
+
+            document.getElementById('prev').addEventListener('click', function() {
+                $('#book').turn('previous');
+                CheckCurrentPage()
+            });
+
+            document.getElementById('next').addEventListener('click', function() {
+                $('#book').turn('next');
+                CheckCurrentPage()
+            });
+
+			document.getElementById('Introduction').addEventListener('click', function() {
+			    const targetPage = 2;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+
+			document.getElementById('Chap1').addEventListener('click', function() {
+			    const targetPage = 6;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+
+			document.getElementById('Chap2').addEventListener('click', function() {
+			    const targetPage = 27;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+
+			document.getElementById('Chap3').addEventListener('click', function() {
+			    const targetPage = 36;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+
+			document.getElementById('Chap4').addEventListener('click', function() {
+			    const targetPage = 68;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+
+			document.getElementById('Chap5').addEventListener('click', function() {
+			    const targetPage = 83;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+
+			document.getElementById('Chap6').addEventListener('click', function() {
+			    const targetPage = 90;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+
+			document.getElementById('Chap7').addEventListener('click', function() {
+			    const targetPage = 104;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+
+			document.getElementById('Chap8').addEventListener('click', function() {
+			    const targetPage = 116;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+
+			document.getElementById('Chap9').addEventListener('click', function() {
+			    const targetPage = 119;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+
+			document.getElementById('Chap10').addEventListener('click', function() {
+			    const targetPage = 216;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+
+			document.getElementById('Chap11').addEventListener('click', function() {
+			    const targetPage = 304;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+
+			document.getElementById('Chap12').addEventListener('click', function() {
+			    const targetPage = 357;
+			    const book = $('#book');
+			    if (book && book.turn) {
+			        book.turn('page', targetPage);
+			    }
+			    CheckCurrentPage()
+			});
+			
+			function CheckCurrentPage(){
+				let currentPage = $('#book').turn('page');
+
+				document.getElementById('Chap1').innerText = "1"
+				document.getElementById('Chap2').innerText = "2"
+				document.getElementById('Chap3').innerText = "3"
+				document.getElementById('Chap4').innerText = "4"
+				document.getElementById('Chap5').innerText = "5"
+				document.getElementById('Chap6').innerText = "6"
+				document.getElementById('Chap7').innerText = "7"
+				document.getElementById('Chap8').innerText = "8"
+				document.getElementById('Chap9').innerText = "9"
+				document.getElementById('Chap10').innerText = "10"
+				document.getElementById('Chap11').innerText = "11"
+				document.getElementById('Chap12').innerText = "12"
+				if(6 <= currentPage && currentPage <= 26){
+					document.getElementById('Chap1').innerText = "Глава 1"
+					document.getElementById('Chap2').innerText = "2"
+					document.getElementById('Chap3').innerText = "3"
+					document.getElementById('Chap4').innerText = "4"
+					document.getElementById('Chap5').innerText = "5"
+					document.getElementById('Chap6').innerText = "6"
+					document.getElementById('Chap7').innerText = "7"
+					document.getElementById('Chap8').innerText = "8"
+					document.getElementById('Chap9').innerText = "9"
+					document.getElementById('Chap10').innerText = "10"
+					document.getElementById('Chap11').innerText = "11"
+					document.getElementById('Chap12').innerText = "12"
+				}else if(27 <= currentPage && currentPage <= 35){
+					document.getElementById('Chap1').innerText = "1"
+					document.getElementById('Chap2').innerText = "Глава 2"
+					document.getElementById('Chap3').innerText = "3"
+					document.getElementById('Chap4').innerText = "4"
+					document.getElementById('Chap5').innerText = "5"
+					document.getElementById('Chap6').innerText = "6"
+					document.getElementById('Chap7').innerText = "7"
+					document.getElementById('Chap8').innerText = "8"
+					document.getElementById('Chap9').innerText = "9"
+					document.getElementById('Chap10').innerText = "10"
+					document.getElementById('Chap11').innerText = "11"
+					document.getElementById('Chap12').innerText = "12"
+				}else if(36 <= currentPage && currentPage <= 67){
+					document.getElementById('Chap1').innerText = "1"
+					document.getElementById('Chap2').innerText = "2"
+					document.getElementById('Chap3').innerText = "Глава 3"
+					document.getElementById('Chap4').innerText = "4"
+					document.getElementById('Chap5').innerText = "5"
+					document.getElementById('Chap6').innerText = "6"
+					document.getElementById('Chap7').innerText = "7"
+					document.getElementById('Chap8').innerText = "8"
+					document.getElementById('Chap9').innerText = "9"
+					document.getElementById('Chap10').innerText = "10"
+					document.getElementById('Chap11').innerText = "11"
+					document.getElementById('Chap12').innerText = "12"
+				}else if(68 <= currentPage && currentPage <= 82){
+					document.getElementById('Chap1').innerText = "1"
+					document.getElementById('Chap2').innerText = "2"
+					document.getElementById('Chap3').innerText = "3"
+					document.getElementById('Chap4').innerText = "Глава 4"
+					document.getElementById('Chap5').innerText = "5"
+					document.getElementById('Chap6').innerText = "6"
+					document.getElementById('Chap7').innerText = "7"
+					document.getElementById('Chap8').innerText = "8"
+					document.getElementById('Chap9').innerText = "9"
+					document.getElementById('Chap10').innerText = "10"
+					document.getElementById('Chap11').innerText = "11"
+					document.getElementById('Chap12').innerText = "12"
+				}else if(83 <= currentPage && currentPage <= 89){
+					document.getElementById('Chap1').innerText = "1"
+					document.getElementById('Chap2').innerText = "2"
+					document.getElementById('Chap3').innerText = "3"
+					document.getElementById('Chap4').innerText = "4"
+					document.getElementById('Chap5').innerText = "Глава 5"
+					document.getElementById('Chap6').innerText = "6"
+					document.getElementById('Chap7').innerText = "7"
+					document.getElementById('Chap8').innerText = "8"
+					document.getElementById('Chap9').innerText = "9"
+					document.getElementById('Chap10').innerText = "10"
+					document.getElementById('Chap11').innerText = "11"
+					document.getElementById('Chap12').innerText = "12"
+				}else if(90 <= currentPage && currentPage <= 103){
+					document.getElementById('Chap1').innerText = "1"
+					document.getElementById('Chap2').innerText = "2"
+					document.getElementById('Chap3').innerText = "3"
+					document.getElementById('Chap4').innerText = "4"
+					document.getElementById('Chap5').innerText = "5"
+					document.getElementById('Chap6').innerText = "Глава 6"
+					document.getElementById('Chap7').innerText = "7"
+					document.getElementById('Chap8').innerText = "8"
+					document.getElementById('Chap9').innerText = "9"
+					document.getElementById('Chap10').innerText = "10"
+					document.getElementById('Chap11').innerText = "11"
+					document.getElementById('Chap12').innerText = "12"
+				}else if(104 <= currentPage && currentPage <= 115){
+					document.getElementById('Chap1').innerText = "1"
+					document.getElementById('Chap2').innerText = "2"
+					document.getElementById('Chap3').innerText = "3"
+					document.getElementById('Chap4').innerText = "4"
+					document.getElementById('Chap5').innerText = "5"
+					document.getElementById('Chap6').innerText = "6"
+					document.getElementById('Chap7').innerText = "Глава 7"
+					document.getElementById('Chap8').innerText = "8"
+					document.getElementById('Chap9').innerText = "9"
+					document.getElementById('Chap10').innerText = "10"
+					document.getElementById('Chap11').innerText = "11"
+					document.getElementById('Chap12').innerText = "12"
+				}else if(116 <= currentPage && currentPage <= 118){
+					document.getElementById('Chap1').innerText = "1"
+					document.getElementById('Chap2').innerText = "2"
+					document.getElementById('Chap3').innerText = "3"
+					document.getElementById('Chap4').innerText = "4"
+					document.getElementById('Chap5').innerText = "5"
+					document.getElementById('Chap6').innerText = "6"
+					document.getElementById('Chap7').innerText = "7"
+					document.getElementById('Chap8').innerText = "Глава 8"
+					document.getElementById('Chap9').innerText = "9"
+					document.getElementById('Chap10').innerText = "10"
+					document.getElementById('Chap11').innerText = "11"
+					document.getElementById('Chap12').innerText = "12"
+				}else if(119 <= currentPage && currentPage <= 215){
+					document.getElementById('Chap1').innerText = "1"
+					document.getElementById('Chap2').innerText = "2"
+					document.getElementById('Chap3').innerText = "3"
+					document.getElementById('Chap4').innerText = "4"
+					document.getElementById('Chap5').innerText = "5"
+					document.getElementById('Chap6').innerText = "6"
+					document.getElementById('Chap7').innerText = "7"
+					document.getElementById('Chap8').innerText = "8"
+					document.getElementById('Chap9').innerText = "Глава 9"
+					document.getElementById('Chap10').innerText = "10"
+					document.getElementById('Chap11').innerText = "11"
+					document.getElementById('Chap12').innerText = "12"
+				}else if(216 <= currentPage && currentPage <= 303){
+					document.getElementById('Chap1').innerText = "1"
+					document.getElementById('Chap2').innerText = "2"
+					document.getElementById('Chap3').innerText = "3"
+					document.getElementById('Chap4').innerText = "4"
+					document.getElementById('Chap5').innerText = "5"
+					document.getElementById('Chap6').innerText = "6"
+					document.getElementById('Chap7').innerText = "7"
+					document.getElementById('Chap8').innerText = "8"
+					document.getElementById('Chap9').innerText = "9"
+					document.getElementById('Chap10').innerText = "Глава 10"
+					document.getElementById('Chap11').innerText = "11"
+					document.getElementById('Chap12').innerText = "12"
+				}else if(304 <= currentPage && currentPage <= 356){
+					document.getElementById('Chap1').innerText = "1"
+					document.getElementById('Chap2').innerText = "2"
+					document.getElementById('Chap3').innerText = "3"
+					document.getElementById('Chap4').innerText = "4"
+					document.getElementById('Chap5').innerText = "5"
+					document.getElementById('Chap6').innerText = "6"
+					document.getElementById('Chap7').innerText = "7"
+					document.getElementById('Chap8').innerText = "8"
+					document.getElementById('Chap9').innerText = "9"
+					document.getElementById('Chap10').innerText = "10"
+					document.getElementById('Chap11').innerText = "Глава 11"
+					document.getElementById('Chap12').innerText = "12"
+				}else if(357 <= currentPage && currentPage <= 358){
+					document.getElementById('Chap1').innerText = "1"
+					document.getElementById('Chap2').innerText = "2"
+					document.getElementById('Chap3').innerText = "3"
+					document.getElementById('Chap4').innerText = "4"
+					document.getElementById('Chap5').innerText = "5"
+					document.getElementById('Chap6').innerText = "6"
+					document.getElementById('Chap7').innerText = "7"
+					document.getElementById('Chap8').innerText = "8"
+					document.getElementById('Chap9').innerText = "9"
+					document.getElementById('Chap10').innerText = "10"
+					document.getElementById('Chap11').innerText = "11"
+					document.getElementById('Chap12').innerText = "Глава 12"
+				}
+			}
+        });
+    </script>
+</body>
+</html>

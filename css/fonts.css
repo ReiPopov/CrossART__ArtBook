@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Refuse Pro';
+    src: url('/fonts/RefusePro/RefusePro.eot');
+    src: url('/fonts/RefusePro/RefusePro.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Headliner';
+    src: url('/fonts/HeadlinerNo45/font.ttf') format('truetype');
+}
